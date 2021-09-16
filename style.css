@@ -259,11 +259,21 @@ main {
     color: #666666;
 }
 
-.teste a{
+.hiperLink a{
     font-weight: 600;
     color: #0B65C2;
 }
 
-.teste::before {
+.hiperLink::before {
     content: "\00B7";
+}
+
+/* ========================== Personal Profile Buttons */
+
+.profileButtonsContainer {
+    display: flex;
+}
+
+.profileButtons {
+    background-color: #0B65C2;
 }
