@@ -3,6 +3,7 @@
 :root {
     font-family: 'Rambla', sans-serif;
     --maxwidth: 1128px;
+    --maxWidthNoMargin: 1076px;
 }
 
 
@@ -10,6 +11,7 @@ a {
     text-decoration: none;
     width: 100%;
     height: 100%;
+    color: black;
 }
 
 input {
@@ -34,6 +36,8 @@ header {
     width: 100%;
     height: 59px;
     background: #FFFFFF;
+    min-width: 769px;
+    z-index: 10000000000;
 }
 
 nav {
@@ -144,7 +148,8 @@ nav {
 
 #mePadding {
     display: flex;
-    width: 16.4vw;
+    width: 16.4%;
+    min-width: 65px;
     padding-left: 25px;
 }
 
@@ -158,33 +163,49 @@ nav {
 
 main {
     display: flex;
-    align-items: center;
+
     justify-content: center;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background: #F3F2EE;
 }
 
 .container {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     max-width: var(--maxwidth);
     height: 100%;
     width: 100%;
+    height: fit-content;
 }
 
 .profile {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    max-width: var(--maxwidth);  
+    max-width: var(--maxWidthNoMargin);
+    min-width: 769px;
     background-color: white;  
-    width: 100%;
-    height: 460px;
+    height: fit-content;
+    max-height: 460px;
     margin: 0px 26px;
     margin-top: 38px;
     margin-bottom: 32px;
-    border-radius: 10px;   
+    border-radius: 10px;
+    padding-bottom: 28px;   
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    max-width: var(--maxWidthNoMargin);
+    min-width: 769px;
+    background-color: white;
+    margin: 0px 26px;
+    margin-bottom: 38px;
+    border-radius: 10px;
+    padding-bottom: 15px;
+    height: 100%;   
 }
 
 /* ========================== Personal Profile Background*/
@@ -209,7 +230,7 @@ main {
     width: 158px;
     height: 158px;
     position: relative;
-    top: -120px;
+    top: -110px;
     left: 32px;
 }
 
@@ -237,33 +258,200 @@ main {
 
 /* ========================== Personal Profile Information*/
 
+.profileInformationContainer{
+    display: flex;    
+}
+
 .profileInformation {
     display: flex;
     flex-direction: column;
-    height: 265px;
-    line-height: 1.5;
+    height: 82px;
     margin-left: 22px;
 }
 
 .profileInformation h1 {
     font-weight: bold;
     font-size: 18px;
+    line-height: 1.5;
 }
 
 .profileInformation h2 {
     font-size: 14px;
+    line-height: 1.4;
 }
 
 .profileInformation h3 {
     font-size: 12px;
     color: #666666;
+    line-height: 1.4;
 }
 
-.teste a{
+.hiperLink a{
     font-weight: 600;
     color: #0B65C2;
 }
 
-.teste::before {
+.hiperLink::before {
     content: "\00B7";
+}
+
+/* ========================== Personal Profile Buttons */
+
+.profileButtonsContainer {
+    display: flex;
+    padding: 0px 20px;
+    height: 32px;
+    width: 100%;
+}
+
+.profileButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: #666666;
+    color: black;
+    border: 1px solid;
+    border-color: black;
+    background-color: white;
+    margin-right: 10px;
+    border-radius: 17px;
+    overflow: hidden;
+    border-color: #00000099;
+    color: #00000099;
+    vertical-align: middle;
+    font-size: 16px;
+    font-weight: bold;
+    width: fit-content;
+    padding: 0px 16px;
+}
+
+.blueButton {
+    color: white;
+    border-color: #0B65C2;
+    background-color: #0B65C2;
+    max-width: 185px;
+}
+
+.profileButtons:hover {
+    transition-timing-function: line;
+    transition-duration: 0.2s;
+    transition-property: background-color,box-shadow,color;
+    background-color: #00000015;
+    color: #00000099;
+    box-shadow: inset 0 0 0 1px #00000099;
+}
+
+.blueButton:hover {
+    background-color: #004182;
+    color: white;
+    border-color: #004182;
+    box-shadow: none;
+}
+
+.profileButtonsContainer div {
+    display: flex;
+}
+
+/* ========================== About Block (Experience + Education)  */
+
+.aboutExperienceContainer {
+    display: flex;
+    flex-direction: column;
+    padding-top: 24px;
+    padding-left: 24px;
+    border-bottom: #EBEBEB 1px solid;
+}
+
+.aboutExperienceTitle h2{
+    padding-bottom: 10px;
+    font-size: 20px;    
+}
+
+.aboutExperienceActivityContainer{
+    padding-top: 25px;
+}
+
+.aboutImageWrapper{
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    min-height: 56px;
+}
+
+.aboutExperienceActivity {
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutExperienceActivity li a {
+    display: flex;
+    padding-bottom: 19px;
+}
+
+.aboutExperienceActivity li a section:last-child {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0px;
+    border-bottom: none;
+}
+
+.aboutExperienceInfo {
+    margin-left: 24px;
+    width: 100%;    
+    border-bottom: #EBEBEB 1px solid;
+}
+
+.aboutExperienceInfo h1 {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.aboutExperienceInfo h2 {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.aboutExperienceInfo h3 {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #00000099;
+}
+
+.aboutExperienceInfo p {
+    margin-top: 10px;
+    padding-right: 70px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+.aboutExperienceInfo:last-child {
+    padding-bottom: 15px;
+}
+
+.aboutEducationContainer {
+    display: flex;
+    flex-direction: column;
+    padding-top: 24px;
+    padding-left: 24px;
+}
+
+a div:hover h1,a div:hover h2,a div:hover h3{
+    width: fit-content;
+    text-decoration: underline;
+    text-decoration-color: blue;
+}
+
+a section:hover h1,a section:hover h2,a section:hover h3{
+    width: fit-content;
+    text-decoration: underline;
+    text-decoration-color: blue;
+}
+
+a div img:hover h1{
+    text-decoration: underline;
+    text-decoration-color: blue;
 }
