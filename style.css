@@ -177,15 +177,15 @@ nav {
     opacity: 0.65;
 }
 
-.iconButtons:hover p{
+.iconButtons:hover p {
     opacity: 1;
 }
 
-.iconButtons:hover div{
+.iconButtons:hover div {
     opacity: 1;
 }
 
-#myImage{
+#myImage {
     border-radius: 25px;
 }
 
@@ -196,7 +196,7 @@ nav {
     /* padding-left: 5px; */
 }
 
-#mePadding div{
+#mePadding div {
     opacity: 1;
 }
 
@@ -287,7 +287,7 @@ main {
     border-radius: 50%;
 }
 
-.profilePicture{
+.profilePicture {
     padding: auto;
     width: 150px;
     height: 150px;   
@@ -300,8 +300,9 @@ main {
 
 /* ========================== Personal Profile Information*/
 
-.profileInformationContainer{
+.profileInformationContainer {
     display: flex;    
+    justify-content: space-between;
 }
 
 .profileInformation {
@@ -309,37 +310,93 @@ main {
     flex-direction: column;
     height: 82px;
     margin-left: 22px;
+    margin-right: 22px;
+    height: fit-content;
 }
 
 .profileInformation h1 {
     font-weight: bold;
-    font-size: 18px;
-    line-height: 1.5;
+    font-size: 24px;
+    line-height: 1.4;
+    color: #000000e6;
 }
 
 .profileInformation h2 {
-    font-size: 14px;
+    font-size: 16px;
+    color: #000000e6;
     line-height: 1.4;
 }
 
 .profileInformation h3 {
-    font-size: 12px;
-    color: #666666;
+    font-size: 15px;
+    color: #00000099;
     line-height: 1.4;
 }
 
 .hiperLink a {
     font-weight: 600;
-    color: #0B65C2;
+    color: #0a66c2;
 }
 
 .hiperLink a:hover {
     text-decoration: underline;
-    text-decoration-color: #0B65C2;
+    text-decoration-color: #0a66c2;
 }
 
 .hiperLink::before {
     content: "\00B7";
+}
+
+.profileConection {
+    margin-top: 8px;
+    margin-bottom: 12px;
+    margin-left: 22px;
+}
+
+.profileConection a {
+    font-weight: 600;
+    color: #0B65C2;
+}
+
+.profileConection a:hover {
+    text-decoration: underline;
+    text-decoration-color: #0B65C2;
+}
+
+.profileInformationPlaces {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-right: 24px;
+    width: 250px;
+}
+
+.profileInformationPlaces a {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.profileInformationImageWrapper {
+    height: 32px;
+    word-wrap: 32px;
+    min-width: 32px;
+    min-height: 32px;
+}
+
+.profileInformationPlaces a p {
+    padding-left: 8px;
+    line-height: 20px;
+}
+
+.profileInformationPlaces a:nth-last-child(1) {
+    margin-bottom: 0px;
+}
+
+.profileInformationPlaces a:hover > * {
+    text-decoration: underline;
+    text-decoration-color: #0a66c2;
 }
 
 /* ========================== Personal Profile Buttons */
@@ -446,7 +503,7 @@ main {
     margin-left: 80px;
 }
 
-.aboutExperienceParagraph p{
+.aboutExperienceParagraph p {
     width: fit-content;    
 }
 
@@ -483,7 +540,7 @@ main {
     margin-top: 15px;
 }
 
-.aboutInfoContainer li:last-child div{
+.aboutInfoContainer li:last-child div {
     border-bottom: none;
 }
 
@@ -495,19 +552,7 @@ main {
     padding-bottom: 24px;
 }
 
-a div:hover h1,a div:hover h2,a div:hover h3 {
-    width: fit-content;
-    text-decoration: underline;
-    text-decoration-color: #0a66c2;
-}
-
-a section:hover h1,a section:hover h2,a section:hover h3 {
-    width: fit-content;
-    text-decoration: underline;
-    text-decoration-color: #0a66c2;
-}
-
-a div img:hover h1 {
+.aboutInfoContainer a:hover > * {
     text-decoration: underline;
     text-decoration-color: #0a66c2;
 }
